@@ -1,0 +1,19 @@
+2013.12.17
+已完成：模型制作
+		导入platform的demo
+
+问题：遇到截屏问题，需要自己写代码添加事件来保存当前帧的图像
+http://bbs.osgchina.org/forum.php?mod=viewthread&tid=9129:
+ImageHandler实现屏幕截屏的事件类
+
+http://trac.openscenegraph.org/projects/osg//browser/OpenSceneGraph/trunk/examples/osgautocapture/osgautocapture.cpp?rev=11115
+http://blog.csdn.net/yungis/article/details/8503951
+osgautocapture.cpp代码及其解析
+
+得到的经验：osg::PositionAttitudeTransform确实可以做到旋转放缩和移动，但是如果场景里只有一个模型节点，
+			那么被PositionAttitudeTransform作用过的模型仍然会出现在相机的正中间
+
+			如果场景里有两个以上的模型，经过PositionAttitudeTransform作用，他们会按照作用后的效果排列
+
+下一步工作：1.解决截屏问题
+			2.完成模型布放，摄像机姿态调整的工作

@@ -1,0 +1,6 @@
+20131206
+二维vector似乎导致push_back无效，使用的方法还没有搞清楚
+全局的header文件导致boost错误，暂时不要用全局header
+
+30131208
+当常量R的数值大于vectorData中规定的行数时，这个exception的检查还不完善
