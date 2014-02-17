@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<account>
+  <users>
+    <user username="Simson" code="0431" email="pageno.91@163.com" role="user">
+    </user>
+  </users>
+  <admins>
+    <admin username="admin" code="admin" email="pageno.91@163.com" role="admin">
+    </admin>
+  </admins>
+</account>

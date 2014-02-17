@@ -1,0 +1,108 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="UIForSpecialist.SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head runat="server">
+    <title>机组故障检修专家系统</title>
+    <link rel="stylesheet" href="/Styles/bootstrap.min.css"/>
+    <script src="/Scripts/jquery.min.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+
+    <style>
+        .navbar
+        {
+            background-color: rgba(65, 139, 202, 1.0);            
+        }
+        .navbar-default .navbar-nav>li>a
+        {
+            color:White;
+        }
+        .navbar-default .navbar-brand
+        {
+            color:White;
+        }
+        .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus
+        {
+            background-color:transparent;
+        }
+        p {text-indent:2em}
+        .navbar-default .navbar-text
+        {
+            color:White;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="collapse navbar-collapse">
+              <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">故障数据库管理
+                    <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/mulfunctionDb/TreeBuild.aspx">故障树建立</a></li>
+                        <li><a href="#">故障树搜索</a></li>
+                        <li><a href="#">故障节点维护</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">故障案例库管理
+                    <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">案例添加</a></li>
+                        <li><a href="#">案例检索</a></li>
+                        <li><a href="#">案例重用</a></li>
+                        <li><a href="#">案例修改</a></li>
+                        <li><a href="#">案例删除</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">模型库管理
+                    <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">模型生成</a></li>
+                        <li><a href="#">模型修改</a></li>
+                        <li><a href="#">模型更新</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#">知识库管理</a></li>
+
+                <li><a href="#">故障诊断</a></li>
+
+                <li class="dropdown">
+                    <a href="#">系统维护
+                    <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">用户设置</a></li>
+                        <li><a href="#">权限设置</a></li>
+                        <li><a href="#">密码设置</a></li>
+                        <li><a href="#">数据备份</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="/About.aspx">关于本系统</a></li>
+              </ul>
+              
+              <ul class="nav navbar-nav pull-right">
+                <li><asp:LinkButton runat="server" ID="logOutBtn" cssClass="pull-right" OnClick="logOutBtn_Click">登出</asp:LinkButton></li>
+                </ul>
+                <p class="navbar-text pull-right">欢迎 <%=username %></p>
+            </div><!--/.nav-collapse -->
+            </div>
+        </div>
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>

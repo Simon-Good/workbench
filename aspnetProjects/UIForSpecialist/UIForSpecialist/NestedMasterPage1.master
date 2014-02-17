@@ -1,0 +1,24 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="NestedMasterPage1.master.cs" Inherits="UIForSpecialist.NestedMasterPage1" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+<br />
+<br />
+<div class="container-fluid theme-showcase" role="main">
+    <div class="row-fluid">
+        <div class="col-sm-3 col-md-3 col-lg-3">
+            <div class="well sidebar-nav">
+                <asp:ContentPlaceHolder ID="SideBarContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+
+        <div class="col-sm-9 col-md-9 col-lg-9">
+            <div class="jumbotron">
+                <asp:ContentPlaceHolder ID="Span9Content" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </div>
+</div>
+</asp:Content>
